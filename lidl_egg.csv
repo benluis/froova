@@ -1,0 +1,7 @@
+type,store,name,price,image_url
+Egg,Lidl,Asian style egg noodles,$1.49*,https://production-endpoint.azureedge.net/images/6KS3EE1M61FJAC1GF0QJ0C0/62b99965-44ad-460d-8dbd-a86bfc2fe6dc/587860_500x500_500x500.tif.jpg
+Egg,Lidl,Alpenfest spätzle German egg pasta,$2.29*,https://production-endpoint.azureedge.net/images/6CSJAC9N6DFJAC1GF0QJ0C0/23d7eadb-19c5-4566-aaa4-1cce617196a2/395173_500x500_500x500.tif.jpg
+Egg,Lidl,frozen vegetable egg rolls,$3.59*,https://production-endpoint.azureedge.net/images/6KO34CHK6LFJAC1GF0QJ0C0/2c7be8b1-687e-4339-bbd6-04a43aac511e/502245_500x500_500x500.tif.jpg
+Egg,Lidl,Italiamo egg lasagne,$2.99*,https://production-endpoint.azureedge.net/images/6ORJ6E1L6HFJAC1GF0QJ0C0/dd5f7511-e9be-4fa7-8d41-a1bf4a37a32b/673854_500x500_500x500.tif.jpg
+Egg,Lidl,frozen chicken egg rolls,$3.59*,https://production-endpoint.azureedge.net/images/6KOJ8C1N6HFJAC1GF0QJ0C0/1416d609-4301-4fd8-a79b-bd2d2b99af56/514074_500x500_500x500.tif.jpg
+Egg,Lidl,Liquid Egg Whites,$3.69*,https://production-endpoint.azureedge.net/images/6CSJ6E9K69FJAC1GF0QJ0C0/a426b68e-db14-4cc0-8497-d2b67778aabf/393942_500x500_500x500.tif.jpg

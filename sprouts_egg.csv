@@ -1,0 +1,61 @@
+type,store,name,price,image_url
+Egg,Sprouts,"Applegate Egg, Chicken Sausage, Red Pepper, Onions, & Spinach Frittata Bites 4 Pack",N/A,"https://image-server.unataops.com/image-server/fit-in/200x200/filters:quality(80)/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_3ba867ff-1117-4cf2-9eec-7a812fa0f694.png"
+Egg,Sprouts,"Red's All Natural Turkey Sausage, Egg & Cheese Egg'wich 2 Pack",N/A,"https://image-server.unataops.com/image-server/fit-in/200x200/filters:quality(80)/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_f136855f-5f17-4a74-ad77-9d8dc698e3e4.png"
+Egg,Sprouts,"Applegate Egg, Uncured Bacon & Cheese Frittata Bites 4 Pack",N/A,"https://image-server.unataops.com/image-server/fit-in/200x200/filters:quality(80)/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_ea9a27a7-dd80-4960-836f-03ffd915e119.png"
+Egg,Sprouts,Sprouts Cage Free Large Brown Grade A Eggs,$3.99 /ea,"https://image-server.unataops.com/image-server/fit-in/200x200/filters:quality(80)/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7b9502ce-b4c8-4af6-9b43-b61b5a77e8d7.png"
+Egg,Sprouts,Vital Farms Organic Pasture-Raised Large Grade A Eggs,$13.99 /ea,"https://image-server.unataops.com/image-server/fit-in/200x200/filters:quality(80)/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_43c93ac1-6f1c-40e9-be23-dd88ab0ef9e6.png"
+Egg,Sprouts,Sprouts Organic Free Range Large Grade A Brown Eggs,$4.99 /ea,"https://image-server.unataops.com/image-server/fit-in/200x200/filters:quality(80)/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5758f950-82b2-4572-84a6-ddbac94c431d.png"
+Egg,Sprouts,Sprouts Large Grade A Brown Cage Free Eggs,$2.29 /ea,"https://image-server.unataops.com/image-server/fit-in/200x200/filters:quality(80)/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_20186631-b2c8-45a0-bddb-5245af17524f.png"
+Egg,Sprouts,Vital Farms Pasture-Raised Large Grade A Eggs,$7.99 /ea,"https://image-server.unataops.com/image-server/fit-in/200x200/filters:quality(80)/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_c89a9deb-aab3-49d8-82f9-800779446255.png"
+Egg,Sprouts,Sprouts Cage Free Large Grade A Eggs,$5.79 /ea,"https://image-server.unataops.com/image-server/fit-in/200x200/filters:quality(80)/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_b1009b93-2422-4ca6-93fd-41a759c36e99.png"
+Egg,Sprouts,Sprouts Pasture Raised Large Grade A Brown Eggs,$4.99 /ea,"https://image-server.unataops.com/image-server/fit-in/200x200/filters:quality(80)/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_e6a0ec9e-0e4b-422f-9b47-0a6fc09e6ff3.png"
+Egg,Sprouts,Red's All Natural Sausage Egg And Cheese Breakfast Sandwich,N/A,"https://image-server.unataops.com/image-server/fit-in/200x200/filters:quality(80)/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_48e52758-97e1-4af3-88dc-6665af5eb95e.png"
+Egg,Sprouts,Red's All Natural Turkey Sausage Egg And Cheese Breakfast Sandwich,N/A,"https://image-server.unataops.com/image-server/fit-in/200x200/filters:quality(80)/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_91ad85b2-7829-4a32-b078-67a9d7d9109f.png"
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
+Egg,Sprouts,N/A,N/A,N/A
