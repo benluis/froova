@@ -1,0 +1,85 @@
+type,store,name,price,image_url
+All-purpose flour,Lidl,all purpose flour,$2.38*,https://production-endpoint.azureedge.net/images/6GQJ4E9IBSQJ0C3O6KO30/1d3a6978-72d4-4053-9dc2-2560a818169f/45292_500x500_500x500.tif.jpg
+All-purpose flour,Lidl,all purpose flour,$1.32*,https://production-endpoint.azureedge.net/images/6GO32E9O75FJAC1GF0QJ0C0/7477a464-7fd2-4135-bab9-1dc5339bc781/401989_500x500_500x500.tif.jpg
+All-purpose flour,Lidl,small fajita flour tortillas,$1.79*,https://production-endpoint.azureedge.net/images/68S38DHM75FJAC1GF0QJ0C0/1596fc0b-b9c6-4929-9399-f726718230b2/284669_500x500_500x500.tif.jpg
+All-purpose flour,Lidl,medium flour tortillas,$1.89*,https://production-endpoint.azureedge.net/images/6CSJ8D9P69FJAC1GF0QJ0C0/8372e130-10f5-438a-a99d-b4669d4ac049/394592_500x500_500x500.tif.jpg
+All-purpose flour,Lidl,organic coconut flour,$2.49*,https://production-endpoint.azureedge.net/images/6GO36E1J6TFJAC1GF0QJ0C0/6c25a810-1cce-4269-9186-01bd54102ac5/403837_500x500_500x500.tif.jpg
+All-purpose flour,Lidl,whole wheat flour,$2.99*,https://production-endpoint.azureedge.net/images/68RJ6D9I65FJAC1GF0QJ0C0/6e09ff50-bd42-4f6d-956b-0ff97a6f9137/273521_500x500_500x500.tif.jpg
+All-purpose flour,Lidl,large flour tortillas,$1.89*,https://production-endpoint.azureedge.net/images/6GO3ACHPBSQJ0C3O6KO30/f34da487-4880-4a3b-8cac-c2029c0b6de5/40529_500x500_500x500.tif.jpg
+All-purpose flour,Lidl,"La Banderita® flour tortillas, soft taco",$2.72*,https://production-endpoint.azureedge.net/images/6CSJIC1K6HFJAC1GF0QJ0C0/ec354a76-3883-4dda-a8c2-0734092bbcb2/399044_500x500_500x500.tif.jpg
+All-purpose flour,Lidl,Crivit floor pump,$9.99*,https://production-endpoint.azureedge.net/images/6OOJ0E1H6LFJAC1GF0QJ0C0/683374d8-aafe-499e-b451-b11693dee656/610815_500x500_500x500.tif.jpg
+Baking soda,Lidl,pure baking soda,$0.92*,https://production-endpoint.azureedge.net/images/6CQ3IDPG71FJAC1GF0QJ0C0/bc8fe7a8-f6a7-46ac-97f7-2c756ad488bd/349708_500x500_500x500.tif.jpg
+Baking soda,Lidl,lemon lime soda,$0.59*,https://production-endpoint.azureedge.net/images/6SO3CCHG6DFJAC1GF0QJ0C0/9e6430c4-c3bc-43bd-b890-a19b62f4c7a4/706203_500x500_500x500.tif.jpg
+Baking soda,Lidl,"Lidl Preferred Selection Italian soda, grapefruit",$3.49*,https://production-endpoint.azureedge.net/images/A14KQNQ9DLGMEPA3DTMMIRJ7ADNMURHEE1N6ENPL60O7GD9G60/0a61e8c4-9324-49de-b5ae-cb9da5abc285/PIM_ImageComingSoon.png_500x500.jpg
+Baking soda,Lidl,baking cocoa,$2.69*,https://production-endpoint.azureedge.net/images/64SJ6C9L6PFJAC1GF0QJ0C0/95ddf735-5803-41ea-a1d8-bcde5f126c32/193156_500x500_500x500.tif.jpg
+Baking soda,Lidl,Furtrition tight clumping cat litter,$12.88*,https://production-endpoint.azureedge.net/images/6GQ3IC1N71FJAC1GF0QJ0C0/9c1c54e8-74fc-4665-a0fb-397b232453d5/449078_500x500_500x500.tif.jpg
+Baking soda,Lidl,Clabber Girl® baking powder,$2.63*,https://production-endpoint.azureedge.net/images/6KSJ4C9H6LFJAC1GF0QJ0C0/90ca6779-c54b-479a-871c-676d6fa643d2/592115_500x500_500x500.tif.jpg
+Baking soda,Lidl,Fanta® orange soda,$7.48*,https://production-endpoint.azureedge.net/images/70OJ8DPJBSQJ0C3O6KO30/e7dd11ea-d95c-4353-85d7-ed2272b785f5/81473_500x500_500x500.JPG.jpg
+Baking soda,Lidl,Sprite®,$2.68*,https://production-endpoint.azureedge.net/images/6CP3EDHP65FJAC1GF0QJ0C0/2877a950-a3af-480a-b57f-f058e0659a0e/327691_500x500_500x500.tif.jpg
+Baking soda,Lidl,Sprite®,$7.48*,https://production-endpoint.azureedge.net/images/6CR3ACHL6HFJAC1GF0QJ0C0/959c491c-a832-4d09-b969-54f757a34c3c/365254_500x500_500x500.tif.jpg
+Coconut oil,Lidl,Soapbox® coconut oil conditioner,$4.99*,https://production-endpoint.azureedge.net/images/6OOJ4C1N6TFJAC1GF0QJ0C0/f62b21c5-43ba-4d40-9a77-27ecf06ed0e1/612077_500x500_500x500.tif.jpg
+Coconut oil,Lidl,organic virgin coconut oil,$6.35*,https://production-endpoint.azureedge.net/images/6OO36C9J69FJAC1GF0QJ0C0/28824b9b-a108-47f2-a58c-e109e77220f3/603132_500x500_500x500.tif.jpg
+Coconut oil,Lidl,Soapbox® coconut oil shampoo,$4.99*,https://production-endpoint.azureedge.net/images/6OOJ4C1N71FJAC1GF0QJ0C0/d9728c48-11e3-4996-b91b-0b53879c1f63/612078_500x500_500x500.tif.jpg
+Coconut oil,Lidl,"Banana Boat® deep tanning spray oil with coconut oil, SPF 4",$7.97*,https://production-endpoint.azureedge.net/images/6KP38D9H6PFJAC1GF0QJ0C0/95533ee0-a365-4bae-95f3-09b38d339020/524516_500x500_500x500.tif.jpg
+Coconut oil,Lidl,organic coconut flour,$2.49*,https://production-endpoint.azureedge.net/images/6GO36E1J6TFJAC1GF0QJ0C0/6c25a810-1cce-4269-9186-01bd54102ac5/403837_500x500_500x500.tif.jpg
+Coconut oil,Lidl,"coconut milk, creamy",$1.56*,https://production-endpoint.azureedge.net/images/6OSJ4CHM6PFJAC1GF0QJ0C0/b9b5f9c5-9956-46be-810c-21deb6660dc1/692266_500x500_500x500.tif.jpg
+Coconut oil,Lidl,organic coconut sugar,$7.09*,https://production-endpoint.azureedge.net/images/6OS36CPG6DFJAC1GF0QJ0C0/ae882088-9d30-4c6a-9211-8728c5e8b14e/683303_500x500_500x500.tif.jpg
+Egg,Lidl,Asian style egg noodles,$1.49*,https://production-endpoint.azureedge.net/images/6KS3EE1M61FJAC1GF0QJ0C0/62b99965-44ad-460d-8dbd-a86bfc2fe6dc/587860_500x500_500x500.tif.jpg
+Egg,Lidl,Alpenfest spätzle German egg pasta,$2.29*,https://production-endpoint.azureedge.net/images/6CSJAC9N6DFJAC1GF0QJ0C0/23d7eadb-19c5-4566-aaa4-1cce617196a2/395173_500x500_500x500.tif.jpg
+Egg,Lidl,frozen vegetable egg rolls,$3.59*,https://production-endpoint.azureedge.net/images/6KO34CHK6LFJAC1GF0QJ0C0/2c7be8b1-687e-4339-bbd6-04a43aac511e/502245_500x500_500x500.tif.jpg
+Egg,Lidl,Italiamo egg lasagne,$2.99*,https://production-endpoint.azureedge.net/images/6ORJ6E1L6HFJAC1GF0QJ0C0/dd5f7511-e9be-4fa7-8d41-a1bf4a37a32b/673854_500x500_500x500.tif.jpg
+Egg,Lidl,frozen chicken egg rolls,$3.59*,https://production-endpoint.azureedge.net/images/6KOJ8C1N6HFJAC1GF0QJ0C0/1416d609-4301-4fd8-a79b-bd2d2b99af56/514074_500x500_500x500.tif.jpg
+Egg,Lidl,Liquid Egg Whites,$3.69*,https://production-endpoint.azureedge.net/images/6CSJ6E9K69FJAC1GF0QJ0C0/a426b68e-db14-4cc0-8497-d2b67778aabf/393942_500x500_500x500.tif.jpg
+egg yolk,Lidl,"large cage free brown eggs, grade A",$2.99*,https://production-endpoint.azureedge.net/images/6OQJED1H6DFJAC1GF0QJ0C0/7787b7ae-e44b-463e-862a-267446f4ff67/657413_500x500_500x500.tif.jpg
+egg yolk,Lidl,"large cage free brown eggs, grade A",$4.49*,https://production-endpoint.azureedge.net/images/6OQJED1H6HFJAC1GF0QJ0C0/fceba2ec-165d-4708-ab8d-2e0b5afc933c/657414_500x500_500x500.tif.jpg
+egg yolk,Lidl,Alpenfest spätzle German egg pasta,$2.29*,https://production-endpoint.azureedge.net/images/6CSJAC9N6DFJAC1GF0QJ0C0/23d7eadb-19c5-4566-aaa4-1cce617196a2/395173_500x500_500x500.tif.jpg
+egg yolk,Lidl,Kinder Joy® cream egg,$2.28*,https://production-endpoint.azureedge.net/images/64S38C1J6TFJAC1GF0QJ0C0/f733bbe5-07fd-46c4-b39b-c890c8b0e1eb/184037_500x500_500x500.tif.jpg
+egg yolk,Lidl,Asian style egg noodles,$1.49*,https://production-endpoint.azureedge.net/images/6KS3EE1M61FJAC1GF0QJ0C0/62b99965-44ad-460d-8dbd-a86bfc2fe6dc/587860_500x500_500x500.tif.jpg
+egg yolk,Lidl,frozen pork egg rolls,$3.59*,https://production-endpoint.azureedge.net/images/6KO34CHK6TFJAC1GF0QJ0C0/7d54900e-e904-4d9b-8b40-08955f06e22a/502247_500x500_500x500.tif.jpg
+egg yolk,Lidl,frozen vegetable egg rolls,$3.59*,https://production-endpoint.azureedge.net/images/6KO34CHK6LFJAC1GF0QJ0C0/2c7be8b1-687e-4339-bbd6-04a43aac511e/502245_500x500_500x500.tif.jpg
+Granulated sugar,Lidl,granulated sugar,$3.14*,https://production-endpoint.azureedge.net/images/64R36D1O65FJAC1GF0QJ0C0/ae1f613c-78c0-4abc-b854-ed859f92a8fa/163481_500x500_500x500.tif.jpg
+Granulated sugar,Lidl,organic granulated garlic,$1.99*,https://production-endpoint.azureedge.net/images/6GO3CDHL6LFJAC1GF0QJ0C0/13a5e5f7-5ad9-4505-af64-3a425bbef16d/406655_500x500_500x500.tif.jpg
+Granulated sugar,Lidl,confectioners sugar,$2.22*,https://production-endpoint.azureedge.net/images/6GRJGD1N69FJAC1GF0QJ0C0/54724d2d-0960-4d7a-b7fe-d2e8801f75b1/478472_500x500_500x500.tif.jpg
+Granulated sugar,Lidl,Pepsi® zero sugar,$4.28*,https://production-endpoint.azureedge.net/images/6SR30C1H69FJAC1GF0QJ0C0/edcd4197-5e13-4db2-8ad5-867029b787e0/760012_500x500_500x500.tif.jpg
+Granulated sugar,Lidl,Pepsi® zero sugar,$2.48*,https://production-endpoint.azureedge.net/images/6SR30C1I6DFJAC1GF0QJ0C0/85dbb8e7-bd4c-4536-b8f5-69277916e5e1/760023_500x500_500x500.tif.jpg
+Granulated sugar,Lidl,dark brown sugar,$2.49*,https://production-endpoint.azureedge.net/images/6GOJ4CHM6LFJAC1GF0QJ0C0/d46bace1-3d25-496e-bcd3-02835ab13e7b/412265_500x500_500x500.tif.jpg
+Granulated sugar,Lidl,light brown sugar,$2.22*,https://production-endpoint.azureedge.net/images/6KSJ0CHI6PFJAC1GF0QJ0C0/469c33ae-434d-4e52-b22c-a44942b765cc/590226_500x500_500x500.tif.jpg
+Granulated sugar,Lidl,organic pure cane sugar,$3.14*,https://production-endpoint.azureedge.net/images/6KP38CHN6PFJAC1GF0QJ0C0/de22e876-add2-498e-b2c5-da3a4cd6c8b1/524276_500x500_500x500.tif.jpg
+Granulated sugar,Lidl,Alpenfest sugar coated almonds,$2.49*,https://production-endpoint.azureedge.net/images/6SO32DHO6PFJAC1GF0QJ0C0/50dfd062-e71e-4031-9007-a5a35f38b0fa/701686_500x500_500x500.tif.jpg
+Light or dark brown sugar,Lidl,dark brown sugar,$2.49*,https://production-endpoint.azureedge.net/images/6GOJ4CHM6LFJAC1GF0QJ0C0/d46bace1-3d25-496e-bcd3-02835ab13e7b/412265_500x500_500x500.tif.jpg
+Light or dark brown sugar,Lidl,light brown sugar,$2.22*,https://production-endpoint.azureedge.net/images/6KSJ0CHI6PFJAC1GF0QJ0C0/469c33ae-434d-4e52-b22c-a44942b765cc/590226_500x500_500x500.tif.jpg
+Light or dark brown sugar,Lidl,organic light brown sugar,$3.09*,https://production-endpoint.azureedge.net/images/6GRJ8DPI6DFJAC1GF0QJ0C0/74a22017-6985-4367-914a-6f6b370406ca/474723_500x500_500x500.tif.jpg
+Light or dark brown sugar,Lidl,"Quaker® instant oatmeal, maple brown sugar",$2.87*,https://production-endpoint.azureedge.net/images/6KSJ0E1J6DFJAC1GF0QJ0C0/692d2695-539b-46fd-99cb-edf251fe2833/590833_500x500_500x500.tif.jpg
+Light or dark brown sugar,Lidl,"eyeshadow, brown sugar",$0.49*,https://production-endpoint.azureedge.net/images/6GSJAE1GBSQJ0C3O6KO30/8cf93567-c78b-4247-89b2-f72951e41e11/49580_500x500_500x500.tif.jpg
+Light or dark brown sugar,Lidl,brown sugar toaster pastries,$1.97*,https://production-endpoint.azureedge.net/images/6SPJ6C9I6LFJAC1GF0QJ0C0/e4e10edf-c642-419a-94ca-8bc85d8e3808/733125_500x500_500x500.tif.jpg
+Light or dark brown sugar,Lidl,Pop-Tarts® frosted brown sugar cinnamon,$3.85*,https://production-endpoint.azureedge.net/images/6GO3CD1N6PFJAC1GF0QJ0C0/c48d3bbe-3920-46f3-94e0-55bb31238f49/406476_500x500_500x500.tif.jpg
+Light or dark brown sugar,Lidl,Hatfield® sweet brown sugar ham,$6.79*,https://production-endpoint.azureedge.net/images/6SPJ0D9G75FJAC1GF0QJ0C0/abf9043b-3b90-4179-8507-169afb50096e/730509_500x500_500x500.tif.jpg
+Light or dark brown sugar,Lidl,"BBQ sauce, hickory & brown sugar",$1.48*,https://production-endpoint.azureedge.net/images/6COJ6D9K61FJAC1GF0QJ0C0/6e4640bf-8c99-47b4-b81f-c7e572ea3664/313540_500x500_500x500.tif.jpg
+Pure vanilla extract,Lidl,pure vanilla extract,$4.99*,https://production-endpoint.azureedge.net/images/6GRJ6DHPBSQJ0C3O6KO30/240d84e8-d3f8-4444-a96c-54fbc0c3e742/47369_500x500_500x500.tif.jpg
+Pure vanilla extract,Lidl,pure almond extract,$2.99*,https://production-endpoint.azureedge.net/images/6CQ38D1G65FJAC1GF0QJ0C0/4873547a-baf8-4888-8d64-3695766f841c/344401_500x500_500x500.tif.jpg
+Pure vanilla extract,Lidl,pure lemon extract,$2.99*,https://production-endpoint.azureedge.net/images/6CQ38D1G6HFJAC1GF0QJ0C0/45e4f464-3616-47b2-a6aa-2a0baaf84fce/344404_500x500_500x500.tif.jpg
+Pure vanilla extract,Lidl,Mentos® pure fresh mint gum,$4.12*,https://production-endpoint.azureedge.net/images/64S36C9L71FJAC1GF0QJ0C0/d0e25b79-65f2-4fd3-9a7d-51cd8122a0eb/183158_500x500_500x500.tif.jpg
+Pure vanilla extract,Lidl,blended lowfat vanilla yogurt,$1.99*,https://production-endpoint.azureedge.net/images/6OPJEE9N6PFJAC1GF0QJ0C0/0057b7d7-ebb5-4aeb-bb16-3688e48af291/637976_500x500_500x500.tif.jpg
+Pure vanilla extract,Lidl,Mentos® pure fresh spearmint gum,$4.12*,https://production-endpoint.azureedge.net/images/64S36C9L75FJAC1GF0QJ0C0/cb96c3ab-7817-439f-92bc-ffb251ea71b1/183159_500x500_500x500.tif.jpg
+Pure vanilla extract,Lidl,Crisco® pure canola oil,$4.88*,https://production-endpoint.azureedge.net/images/6KR3AD9O6HFJAC1GF0QJ0C0/6021607c-4d63-4841-8262-c8bd06316d31/565584_500x500_500x500.tif.jpg
+Pure vanilla extract,Lidl,Goya Canilla® enriched rice,$5.48*,https://production-endpoint.azureedge.net/images/68PJCE9P6DFJAC1GF0QJ0C0/d7eb36ff-f302-4830-9825-8852b16a41c9/236993_500x500_500x500.tif.jpg
+Pure vanilla extract,Lidl,Pure Leaf® sweet tea,$3.28*,https://production-endpoint.azureedge.net/images/A14KQNQ9DLGMEPA3DTMMIRJ7ADNMURHEE1N6ENPL60O7GD9G60/0a61e8c4-9324-49de-b5ae-cb9da5abc285/PIM_ImageComingSoon.png_500x500.jpg
+Salt,Lidl,iodized salt,$0.67*,https://production-endpoint.azureedge.net/images/6GP32D9H6LFJAC1GF0QJ0C0/74532acf-e781-4af7-a711-8819181ed3b5/421515_500x500_500x500.tif.jpg
+Salt,Lidl,garlic salt,$1.99*,https://production-endpoint.azureedge.net/images/6OPJGD9I71FJAC1GF0QJ0C0/6b9c9394-8f9e-4565-b121-1fc42d2051db/638528_500x500_500x500.tif.jpg
+Salt,Lidl,"salt free seasoning blend, original",$2.65*,https://production-endpoint.azureedge.net/images/6GO3CDHH6LFJAC1GF0QJ0C0/28c72858-e0b1-413c-90cb-784611452987/406615_500x500_500x500.tif.jpg
+Salt,Lidl,Morton's® iodized salt,$1.67*,https://production-endpoint.azureedge.net/images/6KR3EC1I6LFJAC1GF0QJ0C0/19c9100c-81da-4560-80bd-15e81bdaa4cc/567025_500x500_500x500.tif.jpg
+Salt,Lidl,onion salt,$1.99*,https://production-endpoint.azureedge.net/images/6CSJ6E1M69FJAC1GF0QJ0C0/56d1fe43-8b56-40e9-b042-b351ea624e23/393862_500x500_500x500.tif.jpg
+Salt,Lidl,Italiamo sea salt coarse,$1.99*,https://production-endpoint.azureedge.net/images/6ORJADHH71FJAC1GF0QJ0C0/e609429a-09ba-4bdc-8606-7e6431fdf78d/675618_500x500_500x500.tif.jpg
+Salt,Lidl,sea salt grinder,$1.99*,https://production-endpoint.azureedge.net/images/6KR3ACPK6LFJAC1GF0QJ0C0/ddf3df27-e4f3-489b-a0a1-0432e33ef29d/565345_500x500_500x500.tif.jpg
+Salt,Lidl,Morton's® kosher salt,$2.12*,https://production-endpoint.azureedge.net/images/6KR3EC1I6HFJAC1GF0QJ0C0/4d7a8f81-0aa9-436f-acea-3fe5f20c798b/567024_500x500_500x500.tif.jpg
+Salt,Lidl,salt / pepper grinder,$1.99*,https://production-endpoint.azureedge.net/images/A14KQNQ9DLGMEPA3DTMMIRJ7ADNMURHEE1N6ENPL60O7GD9G60/0a61e8c4-9324-49de-b5ae-cb9da5abc285/PIM_ImageComingSoon.png_500x500.jpg
+Semi-sweet chocolate chips,Lidl,M&M's® milk chocolate candy,$4.78*,https://production-endpoint.azureedge.net/images/64O36CPL69FJAC1GF0QJ0C0/8b46db70-e8bf-40e7-96af-68b10e13dc36/103352_500x500_500x500.tif.jpg
+Semi-sweet chocolate chips,Lidl,original chocolate chip cookies,$3.24*,https://production-endpoint.azureedge.net/images/6COJ0E9O6TFJAC1GF0QJ0C0/35f57148-a9a5-49fc-91e4-dba32f0d1b89/310987_500x500_500x500.tif.jpg
+Semi-sweet chocolate chips,Lidl,white chocolate bar,$1.12*,https://production-endpoint.azureedge.net/images/68Q3ED1K69FJAC1GF0QJ0C0/216f4c1c-7cdc-4471-919b-ea04a5aee04b/247442_500x500_500x500.tif.jpg
+Semi-sweet chocolate chips,Lidl,"chocolate chip cookies, chewy",$2.19*,https://production-endpoint.azureedge.net/images/6COJ6D1L65FJAC1GF0QJ0C0/84343945-15b5-4872-8520-13e70a9107e8/313451_500x500_500x500.tif.jpg
+Semi-sweet chocolate chips,Lidl,milk chocolate bar,$1.12*,https://production-endpoint.azureedge.net/images/68OJCCHOBSQJ0C3O6KO30/aa5a5c55-2945-4cde-8477-2537e5ef895f/21628_500x500_500x500.tif.jpg
+Semi-sweet chocolate chips,Lidl,dark chocolate bar,$1.12*,https://production-endpoint.azureedge.net/images/6KP30C1K6DFJAC1GF0QJ0C0/0affa2f7-ebd6-40ee-a52e-ff00862ebaa1/520043_500x500_500x500.tif.jpg
+Semi-sweet chocolate chips,Lidl,"milk chocolate bar, roasted hazelnut",$1.12*,https://production-endpoint.azureedge.net/images/6KS38E1N6HFJAC1GF0QJ0C0/4e3822c9-29a3-454f-bb64-c5b2cf8faf57/584874_500x500_500x500.tif.jpg
+Semi-sweet chocolate chips,Lidl,Snack Day restaurant style tortilla chips,$1.95*,https://production-endpoint.azureedge.net/images/6GRJ6E9P6HFJAC1GF0QJ0C0/c0a313bc-a656-4e63-9d3a-2d0c175e6a2c/473994_500x500_500x500.tif.jpg
+Semi-sweet chocolate chips,Lidl,"Snack Day plantain chips, jalapeño",$2.49*,https://production-endpoint.azureedge.net/images/6KSJ2D9K71FJAC1GF0QJ0C0/e435cad8-d9c9-4819-a0f2-ba6ace859d67/591548_500x500_500x500.tif.jpg
+Silken tofu,Lidl,Vemondo organic extra firm tofu,$1.45*,https://production-endpoint.azureedge.net/images/6KO30D9J6PFJAC1GF0QJ0C0/91f6af0d-5577-439b-a537-dc6129c81dbf/500536_500x500_500x500.tif.jpg

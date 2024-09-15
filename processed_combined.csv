@@ -1,0 +1,12 @@
+type,name,volume,weight,price,store,cheapest
+All-purpose flour,all purpose flour,,,$1.32*,Lidl,True
+Baking soda,pure baking soda,,,$0.92*,Lidl,True
+Coconut oil,"coconut milk, creamy",,,$1.56*,Lidl,True
+Egg,Asian style egg noodles,,,$1.49*,Lidl,True
+egg yolk,"large cage free brown eggs, grade A",$2.99*,Lidl,True,,
+Granulated sugar,light brown sugar,,,$2.22*,Lidl,True
+Light or dark brown sugar,light brown sugar,,,$2.22*,Lidl,True
+Pure vanilla extract,blended lowfat vanilla yogurt,,,$1.99*,Lidl,True
+Salt,iodized salt,,,$0.67*,Lidl,True
+Semi-sweet chocolate chips,white chocolate bar,,,$1.12*,Lidl,True
+Silken tofu,Vemondo organic extra firm tofu,,,$1.45*,Lidl,True

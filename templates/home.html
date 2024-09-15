@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Froova - Home</title>
+</head>
+<body>
+    <h1>Welcome to Froova!</h1>
+    <form action="/submit_recipe" method="post">  <!-- Adjusted action to match Flask route -->
+        <label for="allergies">Enter your allergies (comma-separated):</label>
+        <input type="text" id="allergies" name="allergies" required><br><br>
+
+        <label for="dietary_preferences">Enter your dietary preferences (comma-separated):</label>
+        <input type="text" id="dietary_preferences" name="dietary_preferences" required><br><br>
+
+        <label for="recipe_link">Enter a recipe link:</label>
+        <input type="url" id="recipe_link" name="recipe_link"><br><br>
+
+        <label for="ingredients">Or manually enter ingredients:</label>
+        <textarea id="ingredients" name="ingredients"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

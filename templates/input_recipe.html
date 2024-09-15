@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Recipe</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        label { display: block; margin-top: 20px; }
+        textarea { width: 300px; height: 150px; }
+        input[type=submit] { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Input Recipe</h1>
+    <form action="" method="post">
+        <label for="recipe_link">Recipe URL (optional):</label>
+        <input type="url" id="recipe_link" name="recipe_link" placeholder="https://example.com/recipe">
+
+        <label for="ingredients">Or, manually enter ingredients:</label>
+        <textarea id="ingredients" name="ingredients" placeholder="List ingredients here..."></textarea>
+
+        <input type="submit" value="Submit Recipe">
+    </form>
+</body>
+</html>
