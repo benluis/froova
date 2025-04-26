@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Froova - Smart Recipe Shopping</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-green-50 to-blue-50 min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-green-600 mb-2">Welcome to Froova</h1>
+            <p class="text-lg text-gray-600">Find the best deals for your recipe ingredients while accommodating your dietary needs</p>
+        </div>
+
+        <!-- Main Form -->
+        <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+            <form action="/submit-recipe" method="post" id="recipe-form" class="space-y-8">
+
+                <!-- Allergies Section -->
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3">Common Allergens</h2>
+                    <p class="text-gray-500 mb-4">Select any allergens you want to avoid:</p>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="allergen-dairy" name="allergen-dairy" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
+                            <label for="allergen-dairy" class="ml-2 text-sm text-gray-700">Dairy/Milk</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="allergen-eggs" name="allergen-eggs" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
+                            <label for="allergen-eggs" class="ml-2 text-sm text-gray-700">Eggs</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="allergen-peanuts" name="allergen-peanuts" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
+                            <label for="allergen-peanuts" class="ml-2 text-sm text-gray-700">Peanuts</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="allergen-tree-nuts" name="allergen-tree-nuts" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
+                            <label for="allergen-tree-nuts" class="ml-2 text-sm text-gray-700">Tree Nuts</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="allergen-fish" name="allergen-fish" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
+                            <label for="allergen-fish" class="ml-2 text-sm text-gray-700">Fish</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="allergen-shellfish" name="allergen-shellfish" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
+                            <label for="allergen-shellfish" class="ml-2 text-sm text-gray-700">Shellfish</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="allergen-soy" name="allergen-soy" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
+                            <label for="allergen-soy" class="ml-2 text-sm text-gray-700">Soy</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="allergen-wheat" name="allergen-wheat" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
+                            <label for="allergen-wheat" class="ml-2 text-sm text-gray-700">Wheat/Gluten</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="allergen-sesame" name="allergen-sesame" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
+                            <label for="allergen-sesame" class="ml-2 text-sm text-gray-700">Sesame</label>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <label for="other-allergies" class="block text-sm font-medium text-gray-700">Other allergies:</label>
+                        <input type="text" id="other-allergies" name="other-allergies" placeholder="e.g., Mustard, Celery" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
+                    </div>
+                </div>
+
+                <!-- Dietary Preferences -->
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3">Dietary Preferences</h2>
+                    <p class="text-gray-500 mb-4">Select any dietary preferences you follow:</p>
+
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="vegetarian" name="diet-vegetarian" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
+                            <label for="vegetarian" class="ml-2 text-sm text-gray-700">Vegetarian</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="vegan" name="diet-vegan" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
+                            <label for="vegan" class="ml-2 text-sm text-gray-700">Vegan</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="halal" name="diet-halal" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
+                            <label for="halal" class="ml-2 text-sm text-gray-700">Halal</label>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <label for="other-preferences" class="block text-sm font-medium text-gray-700">Other preferences:</label>
+                        <input type="text" id="other-preferences" name="other-preferences" placeholder="Any other dietary considerations" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
+                    </div>
+                </div>
+
+                <!-- Recipe Input -->
+                <div class="space-y-6">
+                    <h2 class="text-xl font-semibold text-gray-800">Add Recipe</h2>
+
+                    <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                        <div class="flex items-center mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                            </svg>
+                            <span class="ml-2 text-blue-700 font-medium">Recipe URL</span>
+                        </div>
+                        <input type="text" name="recipe_link" id="recipe_link" placeholder="Paste a link to a recipe PDF" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        <p class="mt-1 text-sm text-gray-500">Enter a link to a recipe PDF file</p>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="flex-grow border-t border-gray-300"></div>
+                        <span class="flex-shrink px-4 text-gray-500">OR</span>
+                        <div class="flex-grow border-t border-gray-300"></div>
+                    </div>
+
+                    <div class="bg-green-50 rounded-lg p-4 border border-green-200">
+                        <div class="flex items-center mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                            <span class="ml-2 text-green-700 font-medium">Enter Ingredients</span>
+                        </div>
+                        <div>
+                            <textarea name="ingredients" id="ingredients" rows="5" placeholder="List your ingredients here, one per line. For example:
+2 cups flour
+1/2 tsp salt
+2 eggs
+1/4 cup sugar" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden fields that will be populated by JavaScript -->
+                <input type="hidden" id="allergies" name="allergies" value="None">
+                <input type="hidden" id="dietary_preferences" name="dietary_preferences" value="">
+
+                <!-- Submit Button -->
+                <div class="flex justify-center pt-4">
+                    <button type="submit" class="px-8 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-lg shadow-md hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transform transition hover:scale-105">
+                        Find Ingredients
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Features -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-5 rounded-lg shadow-md text-center">
+                <div class="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-2">Ingredient Detection</h3>
+                <p class="text-gray-600">Our AI automatically detects recipe ingredients from any source.</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-md text-center">
+                <div class="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-2">Allergy-Safe Options</h3>
+                <p class="text-gray-600">We suggest substitutions for ingredients that match your dietary restrictions.</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-md text-center">
+                <div class="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-2">Price Comparison</h3>
+                <p class="text-gray-600">Find the best deals by comparing prices across multiple grocery stores.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('recipe-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const allergyCheckboxes = document.querySelectorAll('[name^="allergen-"]:checked');
+            const otherAllergies = document.getElementById('other-allergies').value;
+
+            const allergiesList = [];
+            allergyCheckboxes.forEach(checkbox => {
+                allergiesList.push(checkbox.id.replace('allergen-', ''));
+            });
+
+            if (otherAllergies) {
+                allergiesList.push(otherAllergies);
+            }
+
+            document.getElementById('allergies').value = allergiesList.length ? allergiesList.join(', ') : 'None';
+
+            const dietCheckboxes = document.querySelectorAll('[name^="diet-"]:checked');
+            const otherPreferences = document.getElementById('other-preferences').value;
+
+            const dietList = [];
+            dietCheckboxes.forEach(checkbox => {
+                dietList.push(checkbox.id);
+            });
+
+            if (otherPreferences) {
+                dietList.push(otherPreferences);
+            }
+
+            document.getElementById('dietary_preferences').value = dietList.join(', ');
+
+            this.submit();
+        });
+    </script>
+</body>
+</html>

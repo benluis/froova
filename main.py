@@ -1,32 +1,76 @@
-from utils import *
+# external
+from fastapi import FastAPI, Request, Form
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
+import uvicorn
+from contextlib import asynccontextmanager
+from typing import Optional, List, Dict, Any
+
+# internal
+import clients
+import recipe
 
 
-def main():
-    # Open AI API Key
-    openai.api_key = read_api_key()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await clients.setup_clients()
+    yield
+    await clients.close_clients()
 
-    # Ask for allergies and dietary preferences
-    allergies, dietary_preferences = gather_user_info()
 
-    # Make a list of it
-    dietary_restrictions = f"Allergies: {allergies}, Preferences: {dietary_preferences}"
+app = FastAPI(lifespan=lifespan)
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="templates")
 
-    # Get recipe from user
-    recipe_input_options(dietary_restrictions)
 
-    # Ingredients list from user
-    ingredients_df = pd.read_csv(Path(__file__).parent / 'ingredients_list.csv')
+@app.get("/", response_class=HTMLResponse)
+async def home(request: Request) -> HTMLResponse:
+    return templates.TemplateResponse("index.html", {"request": request})
 
-    # Replace problematic items with Open AI
-    x = prompt_for_replacements(ingredients_df)
-    x.to_csv('updated_ingredients_list.csv')
 
-    updated_ingredients_df = pd.read_csv(Path(__file__).parent / 'updated_ingredients_list.csv')
-    process_ingredients_list(updated_ingredients_df)
+@app.get("/input-recipe", response_class=HTMLResponse)
+async def input_recipe_page(request: Request) -> HTMLResponse:
+    return templates.TemplateResponse("input_recipe.html", {"request": request})
 
-    find_cheapest_from_csv(pd.read_csv(Path(__file__).parent / 'final_combined_products.csv'))
 
-    pd.read_csv(Path(__file__).parent / 'processed_combined.csv')
+@app.post("/submit-recipe")
+async def submit_recipe(
+    request: Request,
+    allergies: str = Form("None"),
+    dietary_preferences: str = Form(""),
+    recipe_link: Optional[str] = Form(None),
+    ingredients: Optional[str] = Form(None),
+) -> HTMLResponse:
+    return await recipe.handle_recipe_input(
+        request, allergies, dietary_preferences, recipe_link, ingredients
+    )
+
+
+@app.get("/replacements", response_class=HTMLResponse)
+async def replacements_page(request: Request) -> HTMLResponse:
+    return await recipe.handle_replacements(request)
+
+
+@app.post("/process-replacements")
+async def process_replacements(request: Request) -> HTMLResponse:
+    return await recipe.process_replacements(request)
+
+
+@app.get("/process-shopping", response_class=HTMLResponse)
+async def process_shopping(request: Request) -> HTMLResponse:
+    return await recipe.handle_shopping_list(request)
+
+
+@app.get("/api/ingredients")
+async def api_ingredients() -> List[Dict[str, Any]]:
+    return await recipe.get_ingredients()
+
+
+@app.get("/api/products")
+async def api_products() -> List[Dict[str, Any]]:
+    return await recipe.get_products()
+
+
 if __name__ == "__main__":
-    #main()
-    find_cheapest_from_csv(pd.read_csv(Path(__file__).parent / 'final_combined_products.csv'))
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
