@@ -11,6 +11,7 @@ from fastapi import HTTPException, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import pandas as pd
+import asyncio
 
 # internal
 import clients
@@ -56,8 +57,7 @@ async def handle_recipe_input(
         )
 
         if input_data.recipe_link:
-            # Use new function that handles both PDF and HTML
-            recipe_text: str = get_recipe_content(input_data.recipe_link)
+            recipe_text: str = await save_recipe_from_url(input_data.recipe_link)
             data_store.ingredients_df = await extract_ingredients_from_text(
                 recipe_text, dietary_restrictions
             )
@@ -84,6 +84,96 @@ async def handle_recipe_input(
         raise HTTPException(
             status_code=500, detail=f"Error processing recipe: {str(e)}"
         )
+
+
+async def save_recipe_from_url(url: str) -> str:
+    """Download a recipe webpage and save its content for OpenAI processing."""
+    if not url:
+        raise ValueError("Empty URL provided")
+
+    try:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        }
+
+        # Create a local HTTP client instead of relying on the global one
+        import httpx
+        async with httpx.AsyncClient() as client:
+            response = await client.get(url, headers=headers, timeout=30.0)
+            response.raise_for_status()
+            html_content = response.text
+
+        # Create directory for recipes
+        os.makedirs("recipes", exist_ok=True)
+
+        # Save HTML content
+        html_path = os.path.join("recipes", "recipe_source.html")
+
+        def write_file(path, content):
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(content)
+
+        await asyncio.to_thread(write_file, html_path, html_content)
+
+        # Process with BeautifulSoup
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(html_content, "html.parser")
+
+        # Remove unwanted elements
+        for element in soup(['script', 'style', 'nav', 'footer', 'header', 'aside', 'iframe', 'form']):
+            element.decompose()
+
+        # Try structured data first (Schema.org)
+        recipe_json = soup.select_one('script[type="application/ld+json"]')
+        if recipe_json:
+            import json
+            try:
+                data = json.loads(recipe_json.string)
+                if isinstance(data, dict) and ('recipeIngredient' in data or 'recipe' in data):
+                    ingredients = data.get('recipeIngredient') or data.get('recipe', {}).get('recipeIngredient', [])
+                    instructions = data.get('recipeInstructions') or data.get('recipe', {}).get('recipeInstructions',
+                                                                                                '')
+                    if ingredients:
+                        ingredients_text = "\n".join(ingredients)
+                        formatted_text = f"Ingredients:\n{ingredients_text}\n\nInstructions:\n{instructions}"
+
+                        text_path = os.path.join("recipes", "recipe_text.txt")
+                        await asyncio.to_thread(write_file, text_path, formatted_text)
+
+                        return formatted_text
+            except Exception as e:
+                print(f"Error parsing JSON-LD: {e}")
+
+        # Find recipe content in common containers
+        recipe_content = None
+        selectors = ['div[class*="recipe"]', 'div[class*="ingredients"]', 'article', 'main', 'div[class*="content"]']
+
+        for selector in selectors:
+            elements = soup.select(selector)
+            for element in elements:
+                if len(element.get_text(strip=True)) > 200:
+                    recipe_content = element
+                    break
+            if recipe_content:
+                break
+
+        # Fallback to body if no specific recipe content found
+        if not recipe_content:
+            recipe_content = soup.find("main") or soup.find("body")
+
+        # Extract and clean text
+        text = recipe_content.get_text(separator="\n\n") if recipe_content else soup.get_text(separator="\n\n")
+        formatted_text = "\n".join([line.strip() for line in text.splitlines() if line.strip()])
+
+        # Save text
+        text_path = os.path.join("recipes", "recipe_text.txt")
+        await asyncio.to_thread(write_file, text_path, formatted_text)
+
+        return formatted_text
+
+    except Exception as e:
+        print(f"Error in save_recipe_from_url: {str(e)}")
+        raise RuntimeError(f"Error processing recipe URL: {str(e)}")
 
 
 def get_recipe_content(url: str) -> str:
