@@ -1,6 +1,7 @@
 # built-in
 import csv
 import time
+import math
 import re
 import os
 import random
@@ -424,12 +425,42 @@ class ProductScraper:
 
 
 async def scrape_and_get_products(
-    product_names: List[str], stores: List[Store] = None
+        product_names: List[str], stores: List[Store] = None
 ) -> List[Dict[str, Any]]:
-    """Helper function to be used by FastAPI endpoints"""
+    """Helper function to be used by FastAPI endpoints - with improved anti-bot measures"""
     scraper = ProductScraper(output_dir="product_data")
-    results = await scraper.scrape_products_batch(product_names, stores)
-    return results.to_dict("records") if not results.empty else []
+    all_results = []
+
+    for product in product_names:
+        print(f"Processing ingredient: {product}")
+
+        store_tasks = []
+        for store in stores:
+            task = asyncio.create_task(scraper.scrape_product(product, store))
+            store_tasks.append(task)
+
+        store_results = await asyncio.gather(*store_tasks, return_exceptions=True)
+
+        for result in store_results:
+            if isinstance(result, Exception):
+                print(f"Error during scraping: {result}")
+            else:
+                sanitized_products = []
+                for p in result:
+                    product_dict = p.dict()
+                    for key, value in product_dict.items():
+                        if isinstance(value, float) and (math.isnan(value) or math.isinf(value)):
+                            product_dict[key] = None
+                    sanitized_products.append(product_dict)
+
+                all_results.extend(sanitized_products)
+
+        if product != product_names[-1]:
+            delay = random.uniform(5, 15)
+            print(f"Waiting {delay:.2f} seconds before processing next ingredient...")
+            await asyncio.sleep(delay)
+
+    return all_results if all_results else []
 
 
 async def main():

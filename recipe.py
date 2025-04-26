@@ -1,23 +1,17 @@
 # built-in
-import os
-import requests
 import json
-from io import StringIO
-from pathlib import Path
 from typing import List, Dict, Any, Optional
 
 # external
-import pypdf
 from fastapi import HTTPException, Request, Form
-from fastapi.responses import HTMLResponse
-from fastapi.templating import Jinja2Templates
-import pandas as pd
+import httpx
 from bs4 import BeautifulSoup
+import pandas as pd
 
 # internal
 import clients
-from models import RecipeInput, RecipeAnalysisResult
 from scraper import scrape_and_get_products, Store
+from models import RecipeInput, RecipeAnalysisResult, ReplacementsResult, ReplacementsProcessedResult, ShoppingListResult
 
 
 class RecipeDataStore:
@@ -55,7 +49,7 @@ async def handle_recipe_input(
         dietary_restrictions: str = f"Allergies: {input_data.allergies}, Preferences: {input_data.dietary_preferences}"
 
         if input_data.recipe_link:
-            recipe_text: str = await save_recipe_from_url(input_data.recipe_link)
+            recipe_text: str = await get_recipe_content(input_data.recipe_link)
             data_store.ingredients_df = await extract_ingredients_from_text(
                 recipe_text, dietary_restrictions
             )
@@ -82,26 +76,16 @@ async def handle_recipe_input(
         )
 
 
-async def save_recipe_from_url(url: str) -> str:
+async def get_recipe_content(url: str) -> str:
     """
-    Download recipe from URL and extract text content.
-    """
-    if url.endswith(".pdf"):
-        pdf_path = save_pdf(url)
-        return extract_text_from_pdf(pdf_path)
-    else:
-        return get_recipe_content(url)
-
-
-def get_recipe_content(url: str) -> str:
-    """
-    Download and extract text from a recipe webpage.
+    Download and extract text from a recipe webpage asynchronously.
     """
     try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        return extract_text_from_html(response.text)
-    except requests.RequestException as e:
+        async with httpx.AsyncClient() as client:
+            response = await client.get(url, timeout=10)
+            response.raise_for_status()
+            return extract_text_from_html(response.text)
+    except httpx.RequestError as e:
         raise ValueError(f"Error fetching recipe URL: {e}")
 
 
@@ -120,42 +104,6 @@ def extract_text_from_html(html: str) -> str:
     text = '\n'.join(chunk for chunk in chunks if chunk)
 
     return text
-
-
-def save_pdf(url: str) -> str:
-    """
-    Download PDF from URL and save to local file.
-    """
-    try:
-        response = requests.get(url, stream=True, timeout=10)
-        response.raise_for_status()
-
-        os.makedirs("downloads", exist_ok=True)
-
-        filename = os.path.join("downloads", url.split("/")[-1])
-
-        with open(filename, "wb") as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
-
-        return filename
-    except requests.RequestException as e:
-        raise ValueError(f"Error downloading PDF from {url}: {e}")
-
-
-def extract_text_from_pdf(pdf_path: str) -> str:
-    """
-    Extract text content from a PDF file.
-    """
-    try:
-        text = []
-        with open(pdf_path, 'rb') as f:
-            reader = pypdf.PdfReader(f)
-            for page in reader.pages:
-                text.append(page.extract_text())
-        return "\n".join(text)
-    except Exception as e:
-        raise ValueError(f"Error extracting text from PDF: {e}")
 
 
 async def extract_ingredients_from_text(recipe_text: str, dietary_restrictions: str) -> pd.DataFrame:
@@ -289,19 +237,20 @@ async def get_products() -> List[Dict[str, Any]]:
         return []
 
 
-async def handle_replacements(request: Request) -> HTMLResponse:
-    """Render the replacements UI page"""
+async def handle_replacements(request: Request) -> ReplacementsResult:
+    """Return replacement options in a structured format"""
     try:
         ingredients = await get_ingredients()
-        return templates.TemplateResponse(
-            "replacements.html", {"request": request, "ingredients": ingredients}
+        return ReplacementsResult(
+            success=True,
+            ingredients=ingredients
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
-async def process_replacements(request: Request) -> HTMLResponse:
-    """Process user selected replacements"""
+async def process_replacements(request: Request) -> ReplacementsProcessedResult:
+    """Process user selected replacements and return structured results"""
     form_data = await request.form()
     replacements = []
 
@@ -317,21 +266,22 @@ async def process_replacements(request: Request) -> HTMLResponse:
             data_store.ingredients_df.at[idx[0], "name"] = replacement["replacement"]
             data_store.ingredients_df.at[idx[0], "can_not_eat"] = False
 
-    return templates.TemplateResponse(
-        "replacements_done.html",
-        {"request": request, "replacements": replacements},
+    return ReplacementsProcessedResult(
+        success=True,
+        replacements=replacements
     )
 
 
-async def handle_shopping_list(request: Request) -> HTMLResponse:
-    """Generate and render shopping list with product information"""
+async def handle_shopping_list(request: Request) -> ShoppingListResult:
+    """Generate and return shopping list data in structured format"""
     try:
         ingredients = await get_ingredients()
         products = await get_products()
 
-        return templates.TemplateResponse(
-            "shopping.html",
-            {"request": request, "ingredients": ingredients, "products": products},
+        return ShoppingListResult(
+            success=True,
+            ingredients=ingredients,
+            products=products
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

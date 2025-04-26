@@ -10,6 +10,7 @@ from typing import Optional, List, Dict, Any
 # internal
 import clients
 import recipe
+from models import RecipeInput, RecipeAnalysisResult, ReplacementsResult, ReplacementsProcessedResult, ShoppingListResult
 
 
 @asynccontextmanager
@@ -32,11 +33,11 @@ async def home(request: Request) -> HTMLResponse:
 
 @app.post("/submit-recipe")
 async def submit_recipe(
-        request: Request,
-        allergies: str = Form("None"),
-        dietary_preferences: str = Form(""),
-        recipe_link: Optional[str] = Form(None),
-        ingredients: Optional[str] = Form(None),
+    request: Request,
+    allergies: str = Form("None"),
+    dietary_preferences: str = Form(""),
+    recipe_link: Optional[str] = Form(None),
+    ingredients: Optional[str] = Form(None),
 ):
     """Process recipe input and return structured ingredient data as JSON"""
     try:
@@ -45,13 +46,13 @@ async def submit_recipe(
             allergies=allergies,
             dietary_preferences=dietary_preferences,
             recipe_link=recipe_link,
-            ingredients=ingredients
+            ingredients=ingredients,
         )
 
         return {
             "success": result.success,
             "ingredients": result.ingredients,
-            "message": result.message
+            "message": result.message,
         }
     except HTTPException:
         raise
@@ -87,18 +88,18 @@ async def input_recipe_page(request: Request) -> HTMLResponse:
     return templates.TemplateResponse("input_recipe.html", {"request": request})
 
 
-@app.get("/replacements", response_class=HTMLResponse)
-async def replacements_page(request: Request) -> HTMLResponse:
+@app.get("/replacements")
+async def replacements_page(request: Request) -> ReplacementsResult:
     return await recipe.handle_replacements(request)
 
 
 @app.post("/process-replacements")
-async def process_replacements(request: Request) -> HTMLResponse:
+async def process_replacements(request: Request) -> ReplacementsProcessedResult:
     return await recipe.process_replacements(request)
 
 
-@app.get("/process-shopping", response_class=HTMLResponse)
-async def process_shopping(request: Request) -> HTMLResponse:
+@app.get("/process-shopping")
+async def process_shopping(request: Request) -> ShoppingListResult:
     return await recipe.handle_shopping_list(request)
 
 

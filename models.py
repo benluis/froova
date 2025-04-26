@@ -55,3 +55,16 @@ class RecipeAnalysisResult(BaseModel):
     success: bool
     ingredients: List[Dict[str, Any]]
     message: Optional[str] = None
+
+class ReplacementsResult(BaseModel):
+    success: bool
+    ingredients: List[Dict[str, Any]]
+
+class ReplacementsProcessedResult(BaseModel):
+    success: bool
+    replacements: List[Dict[str, str]]
+
+class ShoppingListResult(BaseModel):
+    success: bool
+    ingredients: List[Dict[str, Any]]
+    products: List[Dict[str, Any]]
