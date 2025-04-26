@@ -32,56 +32,29 @@ async def home(request: Request) -> HTMLResponse:
 
 @app.post("/submit-recipe")
 async def submit_recipe(
-    request: Request,
-    allergies: str = Form("None"),
-    dietary_preferences: str = Form(""),
-    recipe_link: Optional[str] = Form(None),
-    ingredients: Optional[str] = Form(None),
+        request: Request,
+        allergies: str = Form("None"),
+        dietary_preferences: str = Form(""),
+        recipe_link: Optional[str] = Form(None),
+        ingredients: Optional[str] = Form(None),
 ):
     """Process recipe input and return structured ingredient data as JSON"""
     try:
-        input_data = recipe.RecipeInput(
+        result = await recipe.handle_recipe_input(
+            request=request,
             allergies=allergies,
             dietary_preferences=dietary_preferences,
             recipe_link=recipe_link,
-            ingredients=ingredients,
+            ingredients=ingredients
         )
 
-        if not input_data.recipe_link and not input_data.ingredients:
-            raise ValueError("Please provide either a recipe link or ingredients")
-
-        dietary_restrictions: str = f"Allergies: {input_data.allergies}, Preferences: {input_data.dietary_preferences}"
-
-        if input_data.recipe_link:
-            recipe_text: str = await recipe.save_recipe_from_url(input_data.recipe_link)
-            recipe.data_store.ingredients_df = await recipe.extract_ingredients_from_text(
-                recipe_text, dietary_restrictions
-            )
-        else:
-            recipe.data_store.ingredients_df = await recipe.extract_ingredients_from_text(
-                input_data.ingredients, dietary_restrictions
-            )
-
-        if recipe.data_store.ingredients_df.empty:
-            raise ValueError("Failed to extract ingredients from provided content")
-
-        # Find alternatives for ingredients that can't be eaten
-        for index, row in recipe.data_store.ingredients_df.iterrows():
-            if row.get("can_not_eat", False):
-                alternatives = await recipe.suggest_alternatives(row["name"])
-                recipe.data_store.ingredients_df.at[index, "alternatives"] = alternatives
-            else:
-                recipe.data_store.ingredients_df.at[index, "alternatives"] = []
-
-        # Return JSON response instead of HTML template
         return {
-            "success": True,
-            "ingredients": recipe.data_store.ingredients_df.to_dict("records")
+            "success": result.success,
+            "ingredients": result.ingredients,
+            "message": result.message
         }
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    except FileNotFoundError as e:
-        raise HTTPException(status_code=404, detail=str(e))
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(
             status_code=500, detail=f"Error processing recipe: {str(e)}"
@@ -94,16 +67,6 @@ async def get_ingredients_api():
     try:
         ingredients = await recipe.get_ingredients()
         return ingredients
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-@app.post("/api/alternatives")
-async def get_alternatives_api(ingredient: str = Form(...)):
-    """Get alternative ingredients for a specific ingredient"""
-    try:
-        alternatives = await recipe.suggest_alternatives(ingredient)
-        return {"alternatives": alternatives}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

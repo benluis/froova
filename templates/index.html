@@ -26,74 +26,86 @@
                 <form id="recipeForm" class="space-y-6">
                     <!-- Allergens -->
                     <div>
-                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Allergens</h2>
-                        <div class="grid grid-cols-2 gap-2 text-sm">
-                            <div class="flex items-center">
-                                <input type="checkbox" id="dairy" name="allergen" value="dairy" class="w-4 h-4 text-green-600 rounded">
-                                <label for="dairy" class="ml-2 text-gray-700">Dairy</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input type="checkbox" id="eggs" name="allergen" value="eggs" class="w-4 h-4 text-green-600 rounded">
-                                <label for="eggs" class="ml-2 text-gray-700">Eggs</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input type="checkbox" id="nuts" name="allergen" value="nuts" class="w-4 h-4 text-green-600 rounded">
-                                <label for="nuts" class="ml-2 text-gray-700">Nuts</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input type="checkbox" id="gluten" name="allergen" value="gluten" class="w-4 h-4 text-green-600 rounded">
-                                <label for="gluten" class="ml-2 text-gray-700">Gluten</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input type="checkbox" id="soy" name="allergen" value="soy" class="w-4 h-4 text-green-600 rounded">
-                                <label for="soy" class="ml-2 text-gray-700">Soy</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input type="checkbox" id="shellfish" name="allergen" value="shellfish" class="w-4 h-4 text-green-600 rounded">
-                                <label for="shellfish" class="ml-2 text-gray-700">Shellfish</label>
-                            </div>
+                        <h3 class="font-medium text-gray-800 mb-2">Allergies & Restrictions</h3>
+                        <div class="grid grid-cols-2 gap-2">
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" name="allergen" value="Dairy" class="h-4 w-4 text-green-600">
+                                <span>Dairy</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" name="allergen" value="Gluten" class="h-4 w-4 text-green-600">
+                                <span>Gluten</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" name="allergen" value="Nuts" class="h-4 w-4 text-green-600">
+                                <span>Nuts</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" name="allergen" value="Eggs" class="h-4 w-4 text-green-600">
+                                <span>Eggs</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" name="allergen" value="Soy" class="h-4 w-4 text-green-600">
+                                <span>Soy</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" name="allergen" value="Shellfish" class="h-4 w-4 text-green-600">
+                                <span>Shellfish</span>
+                            </label>
                         </div>
-                        <input type="text" id="other-allergies" placeholder="Other allergies (comma separated)" class="mt-2 w-full px-3 py-2 text-sm border border-gray-300 rounded-md">
+                        <div class="mt-2">
+                            <input type="text" id="other-allergies" placeholder="Other allergies (comma separated)" class="w-full px-3 py-2 border rounded-md text-sm">
+                        </div>
                     </div>
 
                     <!-- Dietary Preferences -->
                     <div>
-                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Dietary Preferences</h2>
-                        <div class="grid grid-cols-3 gap-2 text-sm">
-                            <div class="flex items-center">
-                                <input type="checkbox" id="vegetarian" name="diet" value="vegetarian" class="w-4 h-4 text-green-600 rounded">
-                                <label for="vegetarian" class="ml-2 text-gray-700">Vegetarian</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input type="checkbox" id="vegan" name="diet" value="vegan" class="w-4 h-4 text-green-600 rounded">
-                                <label for="vegan" class="ml-2 text-gray-700">Vegan</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input type="checkbox" id="halal" name="diet" value="halal" class="w-4 h-4 text-green-600 rounded">
-                                <label for="halal" class="ml-2 text-gray-700">Halal</label>
-                            </div>
+                        <h3 class="font-medium text-gray-800 mb-2">Dietary Preferences</h3>
+                        <div class="grid grid-cols-2 gap-2">
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" name="diet" value="Vegetarian" class="h-4 w-4 text-green-600">
+                                <span>Vegetarian</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" name="diet" value="Vegan" class="h-4 w-4 text-green-600">
+                                <span>Vegan</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" name="diet" value="Kosher" class="h-4 w-4 text-green-600">
+                                <span>Kosher</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" name="diet" value="Halal" class="h-4 w-4 text-green-600">
+                                <span>Halal</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" name="diet" value="Low-carb" class="h-4 w-4 text-green-600">
+                                <span>Low-carb</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" name="diet" value="Keto" class="h-4 w-4 text-green-600">
+                                <span>Keto</span>
+                            </label>
                         </div>
                     </div>
 
                     <!-- Recipe Input -->
                     <div class="space-y-4">
-                        <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                            <label for="recipe_link" class="block text-sm font-medium text-blue-700 mb-1">Recipe URL</label>
-                            <input type="text" id="recipe_link" name="recipe_link" placeholder="https://example.com/recipe" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-md">
-                            <p class="mt-1 text-xs text-gray-500">Paste a link to a recipe website</p>
+                        <h3 class="font-medium text-gray-800 mb-2">Recipe Input</h3>
+                        <div>
+                            <label class="block text-sm text-gray-700 mb-1">Recipe URL</label>
+                            <input type="url" name="recipe_link" placeholder="https://example.com/recipe" class="w-full px-3 py-2 border rounded-md text-sm">
                         </div>
-
                         <div class="text-center text-sm text-gray-500">- OR -</div>
-
-                        <div class="bg-green-50 rounded-lg p-4 border border-green-200">
-                            <label for="ingredients" class="block text-sm font-medium text-green-700 mb-1">Recipe Ingredients</label>
-                            <textarea id="ingredients" name="ingredients" rows="5" placeholder="Enter ingredients list, one per line" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-md"></textarea>
+                        <div>
+                            <label class="block text-sm text-gray-700 mb-1">Paste Ingredients List</label>
+                            <textarea name="ingredients" rows="6" placeholder="1 cup flour&#10;2 eggs&#10;1/2 tsp salt..." class="w-full px-3 py-2 border rounded-md text-sm"></textarea>
                         </div>
                     </div>
 
                     <!-- Submit Button -->
                     <div>
-                        <button type="submit" class="w-full py-2 px-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-md shadow hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                        <button type="submit" class="w-full py-2 px-4 bg-green-600 hover:bg-green-700 text-white font-medium rounded-md shadow-sm">
                             Analyze Recipe
                         </button>
                     </div>
@@ -117,22 +129,22 @@
                 <div class="p-6">
                     <!-- Ingredients Tab -->
                     <div id="ingredients-content" class="tab-content">
-                        <div class="text-center py-10 text-gray-500">
-                            <p>Submit a recipe to see extracted ingredients</p>
+                        <div class="text-center text-gray-500 py-10">
+                            Submit a recipe to see ingredients and alternatives
                         </div>
                     </div>
 
                     <!-- Alternatives Tab -->
                     <div id="alternatives-content" class="tab-content hidden">
-                        <div class="text-center py-10 text-gray-500">
-                            <p>Ingredient alternatives will appear here</p>
+                        <div class="text-center text-gray-500 py-10">
+                            Alternative ingredients will appear here
                         </div>
                     </div>
 
                     <!-- Products Tab -->
                     <div id="products-content" class="tab-content hidden">
-                        <div class="text-center py-10 text-gray-500">
-                            <p>Product recommendations will appear here</p>
+                        <div class="text-center text-gray-500 py-10">
+                            Product information will appear here
                         </div>
                     </div>
                 </div>
@@ -144,7 +156,7 @@
             <div class="bg-white p-5 rounded-lg shadow-md text-center">
                 <div class="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
                     </svg>
                 </div>
                 <h3 class="font-semibold text-lg text-gray-800 mb-2">Ingredient Detection</h3>
@@ -153,7 +165,7 @@
             <div class="bg-white p-5 rounded-lg shadow-md text-center">
                 <div class="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"></path>
                     </svg>
                 </div>
                 <h3 class="font-semibold text-lg text-gray-800 mb-2">Allergy-Safe Options</h3>
@@ -162,7 +174,7 @@
             <div class="bg-white p-5 rounded-lg shadow-md text-center">
                 <div class="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
                 <h3 class="font-semibold text-lg text-gray-800 mb-2">Price Comparison</h3>
@@ -171,331 +183,6 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Tab switching
-            const tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Update button styles
-                    tabButtons.forEach(btn => {
-                        btn.classList.remove('text-green-600', 'border-b-2', 'border-green-500');
-                        btn.classList.add('text-gray-500');
-                    });
-                    this.classList.remove('text-gray-500');
-                    this.classList.add('text-green-600', 'border-b-2', 'border-green-500');
-
-                    // Show/hide tab content
-                    const tabId = this.getAttribute('data-tab');
-                    document.querySelectorAll('.tab-content').forEach(tab => {
-                        tab.classList.add('hidden');
-                    });
-                    document.getElementById(`${tabId}-content`).classList.remove('hidden');
-                });
-            });
-
-            // Form submission with AJAX
-            document.getElementById('recipeForm').addEventListener('submit', async function(e) {
-                e.preventDefault();
-
-                // Process allergies and dietary preferences
-                const allergenElements = document.querySelectorAll('input[name="allergen"]:checked');
-                const otherAllergies = document.getElementById('other-allergies').value;
-                const dietElements = document.querySelectorAll('input[name="diet"]:checked');
-
-                let allergies = Array.from(allergenElements).map(el => el.value);
-                if(otherAllergies) {
-                    allergies = allergies.concat(otherAllergies.split(',').map(item => item.trim()));
-                }
-                document.getElementById('allergies').value = allergies.length ? allergies.join(', ') : 'None';
-
-                const dietPreferences = Array.from(dietElements).map(el => el.value);
-                document.getElementById('dietary_preferences').value = dietPreferences.join(', ');
-
-                // Show loading state
-                document.getElementById('ingredients-content').innerHTML = `
-                    <div class="flex items-center justify-center p-10">
-                        <svg class="animate-spin h-10 w-10 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                    </div>
-                `;
-
-                // Ensure ingredients tab is visible
-                document.querySelector('[data-tab="ingredients"]').click();
-
-                // Get form data
-                const formData = new FormData(this);
-
-                try {
-                    // Submit the form via AJAX
-                    const response = await fetch('/submit-recipe', {
-                        method: 'POST',
-                        body: formData
-                    });
-
-                    if (!response.ok) {
-                        const errorData = await response.json();
-                        throw new Error(errorData.detail || 'Failed to process recipe');
-                    }
-
-                    const data = await response.json();
-
-                    // Display ingredients
-                    displayIngredients(data.ingredients);
-
-                } catch (error) {
-                    showError('Error: ' + error.message);
-                }
-            });
-
-            // Display ingredients function
-            function displayIngredients(ingredients) {
-                if (!ingredients || !ingredients.length) {
-                    document.getElementById('ingredients-content').innerHTML = `
-                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 text-yellow-700">
-                            No ingredients found. Please check your recipe input.
-                        </div>
-                    `;
-                    return;
-                }
-
-                let html = `
-                <div class="mb-4 flex justify-between items-center">
-                    <h2 class="text-xl font-semibold text-gray-800">Extracted Ingredients</h2>
-                    <button id="find-alternatives-btn" class="px-4 py-2 bg-green-500 text-white rounded-md text-sm hover:bg-green-600">
-                        Find Alternatives
-                    </button>
-                </div>
-                <div class="overflow-x-auto">
-                    <table class="min-w-full divide-y divide-gray-200">
-                        <thead class="bg-gray-50">
-                            <tr>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Volume</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Weight</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Dietary Issue</th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
-                `;
-
-                ingredients.forEach(ingredient => {
-                    const hasIssue = ingredient.can_not_eat;
-                    html += `
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ${hasIssue ? 'text-red-600' : 'text-gray-900'}">${ingredient.name}</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${ingredient.volume || '-'}</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${ingredient.weight || '-'}</td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                ${hasIssue ?
-                                '<span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Yes</span>' :
-                                '<span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">No</span>'}
-                            </td>
-                        </tr>
-                    `;
-                });
-
-                html += `
-                        </tbody>
-                    </table>
-                </div>
-                `;
-
-                document.getElementById('ingredients-content').innerHTML = html;
-
-                document.getElementById('find-alternatives-btn').addEventListener('click', findAlternatives);
-            }
-
-            // Find alternatives function
-            async function findAlternatives() {
-                const alternativesTab = document.getElementById('alternatives-content');
-                alternativesTab.innerHTML = `
-                    <div class="flex items-center justify-center p-5">
-                        <svg class="animate-spin h-10 w-10 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                    </div>
-                `;
-
-                document.querySelector('[data-tab="alternatives"]').click();
-
-                try {
-                    const response = await fetch('/api/ingredients');
-                    if (!response.ok) {
-                        throw new Error('Failed to fetch ingredients');
-                    }
-
-                    const ingredients = await response.json();
-                    displayAlternatives(ingredients);
-
-                } catch (error) {
-                    showError('Error finding alternatives: ' + error.message);
-                }
-            }
-
-            // Display alternatives function
-            function displayAlternatives(ingredients) {
-                let html = `
-                <div class="mb-4 flex justify-between items-center">
-                    <h2 class="text-xl font-semibold text-gray-800">Ingredient Alternatives</h2>
-                    <button id="find-products-btn" class="px-4 py-2 bg-blue-500 text-white rounded-md text-sm hover:bg-blue-600">
-                        Find Products
-                    </button>
-                </div>
-                <div class="space-y-6">
-                `;
-
-                const problematicIngredients = ingredients.filter(ing => ing.can_not_eat);
-
-                if (problematicIngredients.length === 0) {
-                    html += `
-                    <div class="bg-green-50 border-l-4 border-green-400 p-4 text-green-700">
-                        Good news! All ingredients in this recipe work with your dietary preferences.
-                    </div>
-                    `;
-                } else {
-                    problematicIngredients.forEach((ingredient, index) => {
-                        html += `
-                        <div class="bg-white shadow overflow-hidden rounded-lg">
-                            <div class="px-4 py-4 sm:px-6 bg-gray-50 flex justify-between">
-                                <h3 class="text-lg font-medium text-red-600">
-                                    ${ingredient.name}
-                                </h3>
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                                    Not suitable
-                                </span>
-                            </div>
-                            <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
-                                <div class="py-3 sm:px-6">
-                                    <div class="text-sm font-medium text-gray-500">Suggested alternatives:</div>
-                                    <div id="alternatives-${index}" class="mt-2 space-y-2">
-                                        <div class="flex items-center">
-                                            <svg class="animate-spin h-5 w-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                            </svg>
-                                            <span class="text-gray-500">Loading alternatives...</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        `;
-
-                        // Fetch alternatives for this ingredient
-                        setTimeout(() => {
-                            fetchAlternativesForIngredient(ingredient.name, index);
-                        }, index * 500); // Stagger requests
-                    });
-                }
-
-                html += `</div>`;
-                document.getElementById('alternatives-content').innerHTML = html;
-
-                // Add event listener for Find Products button
-                const findProductsBtn = document.getElementById('find-products-btn');
-                if (findProductsBtn) {
-                    findProductsBtn.addEventListener('click', findProducts);
-                }
-            }
-
-            // Fetch alternatives for a specific ingredient
-            async function fetchAlternativesForIngredient(ingredientName, index) {
-                try {
-                    const formData = new FormData();
-                    formData.append('ingredient', ingredientName);
-
-                    const response = await fetch('/api/alternatives', {
-                        method: 'POST',
-                        body: formData
-                    });
-
-                    if (!response.ok) {
-                        throw new Error('Failed to fetch alternatives');
-                    }
-
-                    const data = await response.json();
-                    const alternatives = data.alternatives || [];
-
-                    let alternativesHtml = '';
-                    if (alternatives.length > 0) {
-                        alternatives.forEach(alt => {
-                            alternativesHtml += `
-                            <div class="flex items-center text-sm">
-                                <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span>${alt}</span>
-                            </div>
-                            `;
-                        });
-                    } else {
-                        alternativesHtml = `<div class="text-sm text-gray-500">No alternatives found</div>`;
-                    }
-
-                    document.getElementById(`alternatives-${index}`).innerHTML = alternativesHtml;
-
-                } catch (error) {
-                    document.getElementById(`alternatives-${index}`).innerHTML = `
-                        <div class="text-sm text-red-500">Error loading alternatives</div>
-                    `;
-                }
-            }
-
-            // Find products function
-            async function findProducts() {
-                const productsTab = document.getElementById('products-content');
-                productsTab.innerHTML = '<div class="flex items-center justify-center p-5"><svg class="animate-spin h-10 w-10 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg></div>';
-
-                document.querySelector('[data-tab="products"]').click();
-
-                try {
-                    const response = await fetch('/api/products');
-                    if (!response.ok) {
-                        throw new Error('Failed to fetch products');
-                    }
-
-                    const products = await response.json();
-
-                    // Group products by store
-                    const productsByStore = {};
-                    products.forEach(product => {
-                        const store = product.store || 'Unknown';
-                        if (!productsByStore[store]) {
-                            productsByStore[store] = [];
-                        }
-                        productsByStore[store].push(product);
-                    });
-
-                    let html = `
-                        <div class="mb-4">
-                            <h2 class="text-xl font-semibold text-gray-800">Products by Store</h2>
-                        </div>
-                    `;
-
-                    // If no products found
-                    if (Object.keys(productsByStore).length === 0) {
-                        html += `
-                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 text-yellow-700">
-                                No products found for your ingredients.
-                            </div>
-                        `;
-                    } else {
-                        // Create sections for each store
-                        for (const store in productsByStore) {
-                            html += `
-                            <div class="mb-8">
-                                <h3 class="text-lg font-medium text-gray-900 mb-3">${store}</h3>
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            `;
-
-                            // Add products for this store
-                            productsByStore[store].forEach(product => {
-                                html += `
-                                <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                                    <div class="h-48 bg-gray-200 flex items-center justify-center">
-                                        ${product.image_url ?
-                                            `<img src="${product.image
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

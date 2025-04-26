@@ -50,3 +50,8 @@ class IngredientList(BaseModel):
 
 class ProductList(BaseModel):
     products: List[Dict[str, Any]]
+
+class RecipeAnalysisResult(BaseModel):
+    success: bool
+    ingredients: List[Dict[str, Any]]
+    message: Optional[str] = None
